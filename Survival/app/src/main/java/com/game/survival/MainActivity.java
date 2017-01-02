@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         b1 = (Button)findViewById(R.id.button);
         b2 = (Button)findViewById(R.id.button2);
 
-        //final Intent intent = new Intent(this, Mainactivity.class);
+        final Intent intent = new Intent(this, Game.class);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int id) {
                         // User clicked Cancel button
                         Toast.makeText(getApplicationContext(), "Populating a new map...",Toast.LENGTH_SHORT).show();
+                        startActivity(intent);
                     }
                 });
                 builder.setNegativeButton("Resume", new DialogInterface.OnClickListener() {

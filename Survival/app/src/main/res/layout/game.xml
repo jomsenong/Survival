@@ -5,109 +5,168 @@
     android:orientation="horizontal"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:columnCount="4"
-    android:rowCount="4"
+    android:columnCount="5"
+    android:rowCount="5"
     tools:context="com.game.survival.Game">
 
-    <Button
-        android:id="@+id/button1"
+    <ImageView
+        android:id="@+id/image1"
         android:layout_gravity="left|top"
         android:layout_row="0"
         android:layout_column="0"
-        android:layout_margin="20dp"
-        android:text="Button" />
+        android:layout_margin="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_width="88dp" />
 
-    <Button
-        android:id="@+id/button2"
+    <ImageView
+        android:id="@+id/image2"
         android:layout_gravity="left|top"
         android:layout_row="0"
         android:layout_column="1"
-        android:layout_margin="20dp"
-        android:text="Button" />
+        android:layout_margin="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_width="88dp" />
 
-    <Button
-        android:id="@+id/button3"
+    <ImageView
+        android:id="@+id/image3"
         android:layout_gravity="left|top"
         android:layout_row="0"
         android:layout_column="2"
-        android:layout_margin="20dp"
-        android:text="Button" />
+        android:layout_margin="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_width="88dp"  />
 
-    <Button
-        android:id="@+id/button4"
+    <ImageView
+        android:id="@+id/image4"
         android:layout_gravity="left|top"
         android:layout_row="1"
         android:layout_column="0"
-        android:layout_margin="20dp"
-        android:text="Button" />
+        android:layout_margin="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_width="88dp"  />
 
-    <Button
-        android:id="@+id/button5"
+    <ImageView
+        android:id="@+id/image5"
         android:layout_gravity="left|top"
         android:layout_row="1"
         android:layout_column="1"
-        android:layout_margin="20dp"
-        android:text="Button" />
+        android:layout_margin="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_width="88dp"  />
 
-    <Button
-        android:id="@+id/button6"
+    <ImageView
+        android:id="@+id/image6"
         android:layout_gravity="left|top"
         android:layout_row="1"
         android:layout_column="2"
-        android:layout_margin="20dp"
-        android:text="Button" />
+        android:layout_margin="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_width="88dp"  />
 
-    <Button
-        android:id="@+id/button7"
+    <ImageView
+        android:id="@+id/image7"
         android:layout_gravity="left|top"
         android:layout_row="2"
         android:layout_column="0"
-        android:layout_margin="20dp"
-        android:text="Button" />
+        android:layout_margin="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_width="88dp"  />
 
-    <Button
-        android:id="@+id/button8"
+    <ImageView
+        android:id="@+id/image8"
         android:layout_gravity="left|top"
         android:layout_row="2"
         android:layout_column="1"
-        android:layout_margin="20dp"
-        android:text="Button" />
+        android:layout_margin="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_width="88dp"  />
 
-    <Button
-        android:id="@+id/button9"
+    <ImageView
+        android:id="@+id/image9"
         android:layout_gravity="left|top"
         android:layout_row="2"
         android:layout_column="2"
+        android:layout_margin="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_width="88dp"  />
+
+    <TextView
+        android:id="@+id/text0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="3"
+        android:layout_gravity="right|top"
         android:layout_margin="20dp"
+        android:text="Time: 100/100" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:layout_row="1"
+        android:layout_column="3"
+        android:layout_margin="20dp"
+        android:text="Health: 100/100" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:layout_row="1"
+        android:layout_column="4"
+        android:layout_margin="20dp"
+        android:text="Warmth: 100/100" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:layout_row="2"
+        android:layout_column="3"
+        android:layout_margin="20dp"
+        android:text="Water: 100/100" />
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:layout_row="2"
+        android:layout_column="4"
+        android:layout_margin="20dp"
+        android:text="Food: 100/100" />
+
+    <ImageButton
+        android:id="@+id/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:layout_row="0"
+        android:layout_column="4"
+        android:layout_margin="10dp"
+        android:src="@mipmap/settings"
         android:text="Button" />
 
-        <Button
-            android:id="@+id/button10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="0"
-            android:layout_column="3"
-            android:layout_gravity="right|top"
-            android:layout_margin="20dp"
-            android:text="Button" />
+    <TextView
+        android:id="@+id/text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:layout_margin="20dp" />
 
-        <Button
-            android:id="@+id/button11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right|top"
-            android:layout_row="1"
-            android:layout_column="3"
-            android:layout_margin="20dp"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/button12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right|top"
-            android:layout_row="2"
-            android:layout_column="3"
-            android:layout_margin="20dp"
-            android:text="Button" />
 </GridLayout>
