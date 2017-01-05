@@ -72,10 +72,9 @@ public class Game extends AppCompatActivity {
         final TextView tv4 = (TextView) findViewById(R.id.text4); //food
 
         int counter = 1;
-        String land = "";
         for (int i = -1; i < 2; i++) {
             for (int j = -1; j < 2; j++) {
-                land = map[x - i][y - j];
+                String land = map[x + i][y + j];
                 if (counter == 1) {
                     if (land.equals("Lake")) {
                         image1.setImageDrawable(getResources().getDrawable(R.mipmap.lake, getApplicationContext().getTheme()));
@@ -206,7 +205,7 @@ public class Game extends AppCompatActivity {
                 int counter = 1;
                 for (int i = -1; i < 2; i++) {
                     for (int j = -1; j < 2; j++) {
-                        String land = map[x - i][y - j];
+                        String land = map[x + i][y + j];
                         if (counter == 1) {
                             if (land.equals("Lake")) {
                                 image1.setImageDrawable(getResources().getDrawable(R.mipmap.lake, getApplicationContext().getTheme()));
@@ -359,7 +358,7 @@ public class Game extends AppCompatActivity {
                 int counter = 1;
                 for (int i = -1; i < 2; i++) {
                     for (int j = -1; j < 2; j++) {
-                        String land = map[x - i][y - j];
+                        String land = map[x + i][y + j];
                         if (counter == 1) {
                             if (land.equals("Lake")) {
                                 image1.setImageDrawable(getResources().getDrawable(R.mipmap.lake, getApplicationContext().getTheme()));
@@ -513,7 +512,7 @@ public class Game extends AppCompatActivity {
                 int counter = 1;
                 for (int i = -1; i < 2; i++) {
                     for (int j = -1; j < 2; j++) {
-                        String land = map[x - i][y - j];
+                        String land = map[x + i][y + j];
                         if (counter == 1) {
                             if (land.equals("Lake")) {
                                 image1.setImageDrawable(getResources().getDrawable(R.mipmap.lake, getApplicationContext().getTheme()));
@@ -666,7 +665,7 @@ public class Game extends AppCompatActivity {
                 int counter = 1;
                 for (int i = -1; i < 2; i++) {
                     for (int j = -1; j < 2; j++) {
-                        String land = map[x - i][y - j];
+                        String land = map[x + i][y + j];
                         if (counter == 1) {
                             if (land.equals("Lake")) {
                                 image1.setImageDrawable(getResources().getDrawable(R.mipmap.lake, getApplicationContext().getTheme()));
@@ -819,7 +818,7 @@ public class Game extends AppCompatActivity {
                 int counter = 1;
                 for (int i = -1; i < 2; i++) {
                     for (int j = -1; j < 2; j++) {
-                        String land = map[x - i][y - j];
+                        String land = map[x + i][y + j];
                         if (counter == 1) {
                             if (land.equals("Lake")) {
                                 image1.setImageDrawable(getResources().getDrawable(R.mipmap.lake, getApplicationContext().getTheme()));
@@ -973,7 +972,7 @@ public class Game extends AppCompatActivity {
                 int counter = 1;
                 for (int i = -1; i < 2; i++) {
                     for (int j = -1; j < 2; j++) {
-                        String land = map[x - i][y - j];
+                        String land = map[x + i][y + j];
                         if (counter == 1) {
                             if (land.equals("Lake")) {
                                 image1.setImageDrawable(getResources().getDrawable(R.mipmap.lake, getApplicationContext().getTheme()));
@@ -1126,7 +1125,7 @@ public class Game extends AppCompatActivity {
                 int counter = 1;
                 for (int i = -1; i < 2; i++) {
                     for (int j = -1; j < 2; j++) {
-                        String land = map[x - i][y - j];
+                        String land = map[x + i][y + j];
                         if (counter == 1) {
                             if (land.equals("Lake")) {
                                 image1.setImageDrawable(getResources().getDrawable(R.mipmap.lake, getApplicationContext().getTheme()));
@@ -1280,7 +1279,7 @@ public class Game extends AppCompatActivity {
                 int counter = 1;
                 for (int i = -1; i < 2; i++) {
                     for (int j = -1; j < 2; j++) {
-                        String land = map[x - i][y - j];
+                        String land = map[x + i][y + j];
                         if (counter == 1) {
                             if (land.equals("Lake")) {
                                 image1.setImageDrawable(getResources().getDrawable(R.mipmap.lake, getApplicationContext().getTheme()));
@@ -1416,5 +1415,26 @@ public class Game extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Game.this);
+        builder.setTitle("Quit the game?");
+        builder.setNeutralButton("Resume", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked new game button
+                dialog.cancel();
+            }
+        });
+        builder.setNegativeButton("Exit", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked the exit button
+                Toast.makeText(getApplicationContext(), "Exiting...",Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }
